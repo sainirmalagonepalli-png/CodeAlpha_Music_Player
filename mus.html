@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Music Mood</title>
+    <link rel="stylesheet" href="mus.css">
+</head>
+<body>
+
+    <main class="player">
+
+        <!-- Song Cover and Details -->
+        <section class="now-playing">
+
+            <div class="cover" id="cover">
+                <img id="coverImg" src="" alt="Song cover">
+            </div>
+
+            <h1 class="title" id="title">Song title</h1>
+            <p class="artist" id="artist">Artist</p>
+            <p class="status" id="status" role="status"></p>
+
+        </section>
+
+        <!-- Progress Bar -->
+        <section class="progress">
+
+            <input
+                type="range"
+                id="progress"
+                min="0"
+                max="100"
+                step="0.1"
+                value="0"
+                aria-label="Seek"
+            >
+
+            <div class="times">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+
+        </section>
+
+        <!-- Music Controls -->
+        <section class="controls">
+
+            <button id="prev" aria-label="Previous">⏮</button>
+            <button id="play" class="play-btn" aria-label="Play">▶</button>
+            <button id="next" aria-label="Next">⏭</button>
+
+        </section>
+
+        <!-- Volume and Autoplay -->
+        <section class="extras">
+
+            <div class="volume">
+                <button id="mute" aria-label="Mute">🔊</button>
+
+                <input
+                    type="range"
+                    id="volume"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="0.8"
+                    aria-label="Volume"
+                >
+            </div>
+
+            <label class="autoplay">
+                <input type="checkbox" id="autoplay" checked>
+                Autoplay next
+            </label>
+
+        </section>
+
+        <!-- Playlist -->
+        <section class="playlist-wrap">
+
+            <h2>Playlist</h2>
+            <ul class="playlist" id="playlist"></ul>
+
+        </section>
+
+    </main>
+
+    <script src="mus.js"></script>
+
+</body>
+</html>
